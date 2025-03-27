@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Built-In' }  // Run the pipeline from Built-In Node
+    agent { label 'Built-In Node' }  // Run the pipeline from Built-In Node
 
     stages {
         stage('Checkout Code') {
@@ -16,7 +16,7 @@ pipeline {
         }
 
         stage('Execute on QA-AGENT') {
-            agent { label 'QA-AGENT' }  // Switch execution to QA-AGENT
+            agent { label 'QA-AGENT NODE' }  // Switch execution to QA-AGENT
             steps {
                 script {
                     echo "Running commands on QA-AGENT..."
