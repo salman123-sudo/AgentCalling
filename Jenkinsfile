@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     echo "Running commands on QA-AGENT..."
-                    sh 'ls -l /jenk/salman'  // Lists files in the directory
+                    sh 'ls -l /opt/agent-slave'  // Lists files in the directory
                 }
             }
         }
