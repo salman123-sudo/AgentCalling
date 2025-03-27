@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Built-In Node' }  // Run from Built-In Node
+    agent { label '' }  // Run from Built-In Node
 
     options {
         timestamps()  // Enable timestamps in logs
@@ -29,7 +29,7 @@ pipeline {
         }
 
         stage('Execute on QA-AGENT') {
-            agent { label 'QA-AGENT NODE' }  // Run this stage on QA-AGENT
+            agent { label 'jenkins-node-QA' }  // Run this stage on QA-AGENT
             steps {
                 script {
                     echo "🔍 Running commands on QA-AGENT NODE..."
